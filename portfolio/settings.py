@@ -23,7 +23,6 @@ PROJECT_DIR = os.path.join(PROJECT_ROOT,'../portfolio')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('PORFTOLIO_SECRET_KEY')
-# SECRET_KEY = 'django-insecure-i18vq(p@=poa&&39u+xq1b^h)5oray19$j1t-+hly=#dcmwbyz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
