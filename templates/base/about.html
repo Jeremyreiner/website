@@ -1,0 +1,31 @@
+{% load static %}
+{% load bootstrap4 %}
+
+<!--about me -->
+<div class="about-me">
+    <h4>More about me</h4>
+    <p>In search for a great team and projects. If you would like to read more about me 
+        <a href="{% url 'about'%}">Click Here</a>! Or maybe you just came for my
+        <a target="_blank" href="https://docs.google.com/document/d/e/2PACX-1vS5y2wpMODMLbkZmdaP_bNDroefAORDe6OEHdtSPWRBgav_VMaMnVNitOZy0gKhBoVlQ2HbJBrmtwlW/pub?embedded=true">
+            Resume</a>! Either Way, your in the right spot.
+    </p>
+    <hr>
+    <h4>TOP EXPERTISE</h4>
+
+    <p>Fullstack developer with primary focus on Django + Python</p>
+    <div class="d-flex flex-wrap flex-row justify-content-md-around" id="skills">
+        {% for tag in tags %}
+            <div class="p-3">
+                <p>{{tag}}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="social-links">
+    <img id="social_img" style="width: 100%;" src="{% static 'images/desktop_wallpaper.jpg' %}"><br>
+    <h3>Find me on LinkedIn & GitHub</h3>
+    <a target="_blank" href="https://www.linkedin.com/in/jeremy-reiner-608556124/">LinkedIn: @JeremyReiner</a>
+    <br>
+    <a target="_blank" href="https://github.com/Jeremyreiner">GitHub: @JeremyReiner</a>
+</div>

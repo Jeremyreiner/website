@@ -1,0 +1,73 @@
+{% extends 'base/main.html'%}
+{% load static %}
+{% load bootstrap4 %}
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+
+	<section class="s1">
+		<div class="main-container mt-3">
+			<!--greetings-->
+            {% include 'base/greetings.html'%}
+			<!--greetings-->
+		</div>
+	</section>
+
+	<section class="s2">
+		<div class="main-container">
+			<div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+				<a id="list-item-1"></a>
+				<div class="about-wrapper"> 
+					<!--about section-->
+					{% include 'base/about.html'%}
+					<!--about section-->
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="s1">
+		<div class="main-container">
+			<div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+				<h3 id="list-item-2" style="text-align: center;">Some of my past projects</h3>
+				<div class="post-wrapper">
+					<!--posts list-->
+					{% include 'partials/_posts_list.html'%}
+					<!--posts list-->
+				</div>   
+				<p align="center">
+					<a href="{% url 'posts' %}">View More</a>
+				</p>
+			<div>
+		</div>
+	</section>
+	
+	<section class="s2">
+		<div class="main-container">
+			<div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+				<h3 style="text-align: center; margin-top:0px;" id="list-item-3">Get In Touch</h3>
+				<form id="contact-form" action="https://formspree.io/f/xknygnnq"
+				method="POST">
+				<a name="contact"></a>
+
+				<label>Name</label>
+				<input class="input-field" type="text" name="name">
+
+				<label>Subject</label>
+				<input class="input-field" type="text" name="subject">
+
+				<label>Email</label>
+				<input class="input-field" type="text" name="email">
+
+				<label>Message</label>
+				<textarea class="input-field" name="message"></textarea>
+
+				<input id="submit-btn" type="submit" value="Send">
+				</form>
+			</div>
+		</div>
+	</section>   
+</div>
+{% endblock content%}
+
+

@@ -1,0 +1,29 @@
+{% extends 'base/main.html'%}
+{% load static %}
+{% load bootstrap4 %}
+{% block title %}Project{% endblock title %}
+
+{% block content %}
+<section class="s2">
+    <div class="container" style="height:100vh;">
+        <div class="row justify-content-center">
+            <div class="col">
+                <div class="single-post">
+                    <div class="card my-2 text-center s2">
+                        <!--centralize the image tag-->
+                        <img style="width: 35%; height: 50vh;" class="rounded mx-auto d-block" src="{{post.thumbnail.url}}" class="card-img-top">
+                        <!--centralize the image tag-->
+                        <p><strong>{{post.headline}} | {{post.created|date:"d F, Y"}}</strong></p>
+                        <div class="card-body s2">
+                            <a href="{{post.github}}"><p><small>Sub Header: {{post.sub_headline}}</small></p></a>
+                            <p><small>{{post.body|linebreaks}}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content%} 
+

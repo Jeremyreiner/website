@@ -1,0 +1,28 @@
+{% extends 'base/main.html'%}
+{% load static %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+
+{% block title %}Posts{% endblock title %}
+
+{% block content %}
+
+<section class="s2">
+    <div class="container s2" style="height: 100vh;">
+        <h1 style="margin-top: 0px; text-align: center;">Projects </h1>
+        <div class="post-wrapper">
+            <!--posts list-->
+            {% include 'partials/_posts_list.html'%}
+            <!--posts list-->
+        </div>
+        <div class="row justify-content-center">
+            <!--pagination-->
+            {% include 'partials/_pagination.html' %}
+        </div>
+    </div> 
+</section>
+
+{% endblock content%}
+
+
+

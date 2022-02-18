@@ -1,0 +1,37 @@
+{% load static %}
+{% load bootstrap4 %}
+<!--greetings-->
+
+<div class="greeting-wrapper">
+    <h1>Hi, I'm Jeremy Reiner</h1>
+</div>
+
+<div class="intro-wrapper">
+    <div class="left-column">
+        <img id="profile_pic" src="{% static 'images/profile.jpg'%}"><br>
+        <h5 style="text-align: center;line-height: 0;">Personalize Theme</h5>
+
+        <div id="theme-options-wrapper">
+            <div data-mode="light" id="light-mode" class="theme-dot"></div>
+            <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+            <div data-mode="green" id="green-mode" class="theme-dot"></div>
+            <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+        </div>
+
+        <p id="settings-note">*Theme settings will be saved for<br>your next vist</p>
+    </div>
+
+    <div class="right-column">
+        <div id="preview-shadow">
+            <div id="preview">
+                <div id="corner-tl" class="corner"></div>
+                <div id="corner-tr" class="corner"></div>
+                <h3>What I Do</h3>
+                <p>Full Stack Developer taking on the world one project at a time. 
+                </p>
+                <div id="corner-br" class="corner"></div>
+                <div id="corner-bl" class="corner"></div>
+            </div>
+        </div>
+    </div>
+</div>

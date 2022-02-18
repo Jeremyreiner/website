@@ -1,0 +1,65 @@
+{% extends 'base/main.html'%}
+{% load static %}
+{% load bootstrap4 %}
+{% block title %}About Me{% endblock title %}
+
+{% block content %}
+<section class="s2">
+    <div class="container" style="height:100vh;">
+        <div class="row justify-content-center">
+            <div class="col">
+                <div class="single-post">
+                    <div class="card my-2 s2">
+                        <!--centralize the image tag-->
+                        {% include 'partials/_img_carousel.html' %}
+                        <!--centralize the image tag-->
+                        <div class="card-body s2">
+                            <div class="text-center">
+                            <p><strong>Jeremy Reiner</strong></p>
+                            <p><small>A little about me</small></p><hr>
+                            </div>
+                            <div class="text-left">
+                                <p class="indent">
+                                    Growing up in Washington State, I graduated from Central Washington University with a Bachelors in 
+                                    Psychology. After University, I decided to move to Israel and start a new adventure. While living 
+                                    in Israel, I studied and eventually became fluent in Hebrew (reading / writing as well as spoken). 
+                                    I joined the Israeli Defense Force, and quickly moved up the ranks where I eventually finished as 
+                                    a Chief Sergeant in the Navy.
+                                </p>
+                                <p class="indent"> 
+                                    Outside of my military service, I began working at a local restaurant, where the owner took me under 
+                                    his wing. Although his whole family pitched in to help run the business, only he himself spoke English. 
+                                    I was certainly over my head, but I ended up staying there for quite some time. It would be that summer, 
+                                    almost half a year later, that I began my process of joining Garin Tzabar.
+                                </p>
+                                <p class="indent">
+                                    Garin tzabar is a program that assists new Israeli immigrants to serve in the Israeli Defense Forces. 
+                                    It was through this program that I found a new home and moved north, to a city called Regba. Upon 
+                                    moving I had the opportunity to meet with amazing people, who years later are still a huge part of 
+                                    who I am today. It was here where I was able to settle down for the majority of my time in Israel 
+                                    and was happy to call a home.
+                                </p>
+                                <p class="indent">
+                                    In my service I was put on a patrol boat guarding the northern land/sea border. My duties varied 
+                                    throughout my career from Deck Hand, Bosin, Mechanic, Weapons Specialist, Weapons Mechanic, and many others. 
+                                    I was on a team of around 12 men, who together spent the better half of two years together on a tin can in 
+                                    the middle of the sea. There I truly learned the value of teamwork, comradery, friendship, professionalism, 
+                                    and lessons that only on a boat in the middle of the sea can one learn.
+                                </p>
+                                <p class="indent"> 
+                                    Since then, I've been working on developing and honing my skills to become a Software Developer. 
+                                    Finishing my first bootcamp at Developers Institute, and advancing on to my next professional course 
+                                    strengthening my coding abilities at Harvard, taking their CS50 web development course. I'm sure that all of 
+                                    you reading this would be greatly advised to check out my list of projects on the link in the navbar for further 
+                                    details about my work!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content%} 

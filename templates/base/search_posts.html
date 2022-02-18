@@ -1,0 +1,33 @@
+{% extends 'base/main.html'%}
+{% load static %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+
+{% block title %}Searched Projects{% endblock title %}
+
+{% block content %}
+
+<section class="s2">
+    <div class="container" style="height: 100vh;">
+        <h1 style="margin-top: 0px; text-align: center;">Search Results </h1>
+        <div class="post-wrapper">
+            <!--posts list-->
+            {% include 'forms/searched_posts_form.html'%}
+            <!--posts list-->
+        </div>
+        <div class="row justify-content-center">
+            <!--pagination-->
+            {% include 'partials/_pagination.html' %}
+        </div> 
+    </div>
+</section>
+
+{% endblock content%}
+
+
+
+
+
+<!--posts list-->
+{% include 'forms/searched_posts_form.html'%}
+<!--posts list-->
