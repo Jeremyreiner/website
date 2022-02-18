@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('PORFTOLIO_SECRET_KEY')
 DEBUG = os.environ.get('PORTFOLIO_DEBUG')
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['jreiner.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
