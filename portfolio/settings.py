@@ -25,7 +25,8 @@ PROJECT_DIR = os.path.join(PROJECT_ROOT,'../portfolio')
 SECRET_KEY = os.environ.get('PORFTOLIO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG')
+DEBUG = os.environ.get('PORTFOLIO_DEBUG')
+
 
 ALLOWED_HOSTS = []
 
