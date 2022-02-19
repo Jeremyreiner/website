@@ -11,11 +11,11 @@
                 <div class="single-post">
                     <div class="card my-2 text-center s2">
                         <!--centralize the image tag-->
-                        <img style="width: 35%; height: 50vh;" class="rounded mx-auto d-block" src="{{post.thumbnail.url}}" class="card-img-top">
+                        <img style="width: 35vw; height: 100%;" class="rounded mx-auto d-block" src="{{post.thumbnail.url}}" class="card-img-top">
                         <!--centralize the image tag-->
                         <p><strong>{{post.headline}} | {{post.created|date:"d F, Y"}}</strong></p>
                         <div class="card-body s2">
-                            <a href="{{post.github}}"><p><small>Sub Header: {{post.sub_headline}}</small></p></a>
+                            <a href="{{post.github}}"><p><small>Github: {{post.sub_headline}}</small></p></a>
                             <p><small>{{post.body|linebreaks}}</small></p>
                         </div>
                     </div>
