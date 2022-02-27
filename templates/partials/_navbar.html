@@ -43,6 +43,20 @@
 
             {% if request.path == '/posts/' %}
             <li>
+                {% comment %} Re-arrange so that tags filter through posts {% endcomment %}
+                {% comment %} <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tags
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="btn btn-outline-dark btn-block btn-sm m-1" href="{% url 'posts' %}">All</a>
+                        {% for tag in tags %}
+                                <a class="dropdown-item" href="{% url 'posts' %}?tag={{tag.name}}">
+                                    {{tag.name}}
+                                </a>
+                        {% endfor %}
+                    </div>
+                </div> {% endcomment %}
                 <form id="searchForm"  method="GET"></form>
                 <form class="d-flex form"action="{% url 'search_posts' %}"  method='POST'>
                     {% csrf_token %}

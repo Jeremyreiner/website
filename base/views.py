@@ -18,29 +18,32 @@ def home(request):
         }
     return render(request, "base/index.html", context)
 
-def post(request, pk):
-    post = Post.objects.get(id=pk)
-
-    context = {
-        'post': post
-    }
-    return render(request, "base/post.html", context)
-
 
 def posts(request):
     posts = Post.objects.filter(active=True).order_by('-created')
     page = request.GET.get('page')
     paginator = Paginator(posts, 3)
 
-    try: 
-        posts= paginator.page(page)
-    except PageNotAnInteger:
-        posts= paginator.page(1)
-    except EmptyPage:
-        posts = paginator.page(paginator.num_pages)
+    # Re-arange so that tags filter posts
+    # tag = request.POST.get('tag')
+    # if tag == None:
+    #     posts = Post.objects.filter(active=True).order_by("-created")
+    # else:
+    #     posts = Post.objects.filter(active=True, tag__name=tag).order_by("-created")
+
+    # tags = Tag.objects.all()
+
+    # try: 
+    #     posts= paginator.page(page)
+    # except PageNotAnInteger:
+    #     posts= paginator.page(1)
+    # except EmptyPage:
+    #     posts = paginator.page(paginator.num_pages)
 
     context = {
         'posts': posts,
+        # 'tags': tags
+        
     }
     return render(request, 'base/posts.html', context)
 
@@ -110,7 +113,7 @@ def search_posts(request):
 
         context = {
             'searched': searched,
-            'posts':posts
+            'posts':posts,
         }
 
         return render(request, 'base/search_posts.html', context)
