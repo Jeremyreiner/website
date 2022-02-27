@@ -33,12 +33,12 @@ def posts(request):
 
     # tags = Tag.objects.all()
 
-    # try: 
-    #     posts= paginator.page(page)
-    # except PageNotAnInteger:
-    #     posts= paginator.page(1)
-    # except EmptyPage:
-    #     posts = paginator.page(paginator.num_pages)
+    try: 
+        posts= paginator.page(page)
+    except PageNotAnInteger:
+        posts= paginator.page(1)
+    except EmptyPage:
+        posts = paginator.page(paginator.num_pages)
 
     context = {
         'posts': posts,
