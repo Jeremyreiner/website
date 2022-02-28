@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
-# import django_heroku 
+import django_heroku 
 
 # Build paths inside the project like this: PROJECT_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,8 +25,8 @@ PROJECT_DIR = os.path.join(PROJECT_ROOT,'../portfolio')
 SECRET_KEY = os.environ.get('PORFTOLIO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = os.environ.get('PORTFOLIO_DEBUG')
-DEBUG = False
+DEBUG = os.environ.get('PORTFOLIO_DEBUG')
+# DEBUG = True
 
 
 ALLOWED_HOSTS = ['jreiner.herokuapp.com', '127.0.0.1']
@@ -158,4 +158,4 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
 
 
-# django_heroku.settings(locals())
+django_heroku.settings(locals())
