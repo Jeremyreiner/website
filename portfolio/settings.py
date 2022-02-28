@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('PORFTOLIO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('PORTFOLIO_DEBUG')
-#DEBUG = True
+#DEBUG = False
 
 
 ALLOWED_HOSTS = ['jreiner.herokuapp.com', '127.0.0.1']
@@ -127,7 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 MEDIA_URL = '/images/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images/')
 
 
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles/')
@@ -138,8 +138,9 @@ STATICFILES_DIRS = [
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
-
+WHITENOISE_AUTOREFRESH = True
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 
 # Default primary key field type
