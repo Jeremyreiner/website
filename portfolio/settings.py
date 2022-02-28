@@ -26,6 +26,7 @@ SECRET_KEY = os.environ.get('PORFTOLIO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('PORTFOLIO_DEBUG')
+#DEBUG = False
 
 
 ALLOWED_HOSTS = ['jreiner.herokuapp.com', '127.0.0.1']
