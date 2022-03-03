@@ -14,7 +14,6 @@
                     First
                 </a>
             </li>
-
         {% endif %}
 
         {% for i in posts.paginator.page_range %}
@@ -57,6 +56,6 @@
             searchForm.innerHTML += `<input value="${page}" name="page" hidden>`
             searchForm.submit()
         })
-    }
-</script>
+    } 
+</script> 
 {% endif %}

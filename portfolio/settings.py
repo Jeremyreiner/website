@@ -25,8 +25,8 @@ PROJECT_DIR = os.path.join(PROJECT_ROOT,'../portfolio')
 SECRET_KEY = os.environ.get('PORFTOLIO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('PORTFOLIO_DEBUG')
-#DEBUG = False
+#DEBUG = os.environ.get('PORTFOLIO_DEBUG')
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['jreiner.herokuapp.com', '127.0.0.1']
@@ -148,15 +148,24 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#S3 Buckets Config
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID_PORFTOLIO')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY_PORTFOLIO')
-AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME_PORTFOLIO')
+# S3 Buckets Config
+AWS_ACCESS_KEY_ID = 'AKIA57WN62HEJLOJLF3N'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'jrportfolio-bucket'
 
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
+
+# AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID_PORFTOLIO')
+# AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY_PORTFOLIO')
+# AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME_PORTFOLIO')
+
+# AWS_S3_FILE_OVERWRITE = False
+# AWS_DEFAULT_ACL = None
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
 
 
 django_heroku.settings(locals())
